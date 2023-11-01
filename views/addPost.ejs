@@ -1,0 +1,22 @@
+<!-- views/addPost.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <%- include('header') -%>
+    <h1>Add a New Blog Post</h1>
+    <form action="/addPost" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <%- include('footer') -%>
+
+</body>
+</html>

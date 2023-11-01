@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <h1>My Blog</h1>
+  <ul>
+    <% blogPosts.forEach(function(blog) { %>
+      <li>
+        <h2><%= blog.title %></h2>
+        <p><%= blog.content.substring(0, 100) %></p>
+        <a href="/blog/<%= blog.id %>">Read More</a>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/add-blog">Add New Blog</a>
+</body>
+</html>
